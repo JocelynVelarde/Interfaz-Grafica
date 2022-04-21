@@ -1,5 +1,5 @@
-package (default package); 
-
+//package
+//hay error paquete no existente
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
