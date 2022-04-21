@@ -1,6 +1,6 @@
 //package
 //error
-
+// hola
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
