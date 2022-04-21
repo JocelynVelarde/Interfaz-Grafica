@@ -1,2 +1,2 @@
 # Interfaz-Grafica
-<ul> Ligar las ventanas </ul>
+<ol> Ligar las ventanas </ol>
