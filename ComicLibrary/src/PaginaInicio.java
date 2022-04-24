@@ -1,5 +1,5 @@
 //package
-//hay error paquete no existente
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,10 +10,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-//hola
+
 public class PaginaInicio {
 
 	private JFrame frmComicLibrary;
+	private MenuLibrerias menuLibreriasWindow; 
 
 	/**
 	 * Launch the application.
@@ -56,6 +57,8 @@ public class PaginaInicio {
 		btnButtonExplore.addMouseListener(new MouseAdapter() {
 			@Override	
 			public void mouseClicked(MouseEvent e) {
+				menuLibreriasWindow = new MenuLibrerias();
+				menuLibreriasWindow.setVisibility(true);
 			}
 		});
 		btnButtonExplore.setFont(new Font("Bahnschrift", Font.PLAIN, 36));
