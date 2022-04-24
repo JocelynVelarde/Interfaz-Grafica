@@ -87,13 +87,13 @@ public class PaginaInicio {
 		frmComicLibrary.getContentPane().add(lbtoTheUltimate);
 		
 		JLabel lbStarWarsLogo = new JLabel("");
-		lbStarWarsLogo.setIcon(new ImageIcon("resources\\Star-Wars-Logo.png"));
+		lbStarWarsLogo.setIcon(new ImageIcon("resource\\Star-Wars-Logo.png"));
 		lbStarWarsLogo.setBounds(804, 296, 342, 221);
 		frmComicLibrary.getContentPane().add(lbStarWarsLogo);
 		
 		JLabel lbFondoPaginaInicio = new JLabel("fondo pagina inicio ");
 		lbFondoPaginaInicio.setForeground(new Color(255, 255, 255));
-		lbFondoPaginaInicio.setIcon(new ImageIcon("resources\\fondo de ventana principal.jpg"));
+		lbFondoPaginaInicio.setIcon(new ImageIcon("resource\\fondo de ventana principal.jpg"));
 		lbFondoPaginaInicio.setBounds(0, -10, 1234, 787);
 		frmComicLibrary.getContentPane().add(lbFondoPaginaInicio);
 	}
