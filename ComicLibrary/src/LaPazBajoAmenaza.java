@@ -4,16 +4,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+
 
 import javax.swing.JButton;
-import javax.swing.ImageIcon;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URI;
+
 import java.net.URISyntaxException;
 import java.net.URL;
 

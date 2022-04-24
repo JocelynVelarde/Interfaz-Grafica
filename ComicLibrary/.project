@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>resources/Star-Wars-Logo.png</name>
+			<type>1</type>
+			<location>C:/Users/jvela/Downloads/Star-Wars-Logo.png</location>
+		</link>
+		<link>
+			<name>resources/fondo de ventana principal.jpg</name>
+			<type>1</type>
+			<location>C:/Users/jvela/Downloads/fondo de ventana principal.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>
