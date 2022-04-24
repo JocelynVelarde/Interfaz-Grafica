@@ -1,8 +1,21 @@
+import java.awt.Desktop;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class LaPazBajoAmenaza {
 
@@ -31,6 +44,7 @@ public class LaPazBajoAmenaza {
 		initialize();
 	}
 
+
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -42,8 +56,36 @@ public class LaPazBajoAmenaza {
 		
 		JLabel lblNewLabel = new JLabel("La Paz Bajo Amenaza");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel.setBounds(146, 73, 232, 50);
+		lblNewLabel.setBounds(99, 23, 232, 50);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("El Tratado de Coruscant");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				abrirlink();
+			}
+			
+			private void abrirlink() {
+				URL url=null;
+				try {
+				    url = new URL("https://starwars.fandom.com/es/wiki/The_Old_Republic,_La_Paz_bajo_Amenaza_Acto_1:_El_Tratado_de_Coruscant#app_personajestps://franciscoguemes.wordpress.com/");
+				    try {
+				        Desktop.getDesktop().browse(url.toURI());
+				    } catch (IOException e) {
+				        e.printStackTrace();
+				    } catch (URISyntaxException e) {
+				        e.printStackTrace();
+				    }
+				} catch (MalformedURLException e1) {
+				    e1.printStackTrace();
+				}
+			}
+			
+		});
+		btnNewButton.setIcon(null);
+		btnNewButton.setBounds(24, 147, 168, 30);
+		frame.getContentPane().add(btnNewButton);
 	}
 	
 	public void setVisibility(boolean visible) {
