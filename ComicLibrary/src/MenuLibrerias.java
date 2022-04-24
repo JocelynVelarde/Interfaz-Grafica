@@ -7,10 +7,18 @@ import javax.swing.JList;
 import javax.swing.AbstractListModel;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MenuLibrerias {
 
 	private JFrame frame;
+	private LosSolesPerdidos losSolesPerdidosWindow; 
+	private LaPazBajoAmenaza laPazBajoAmenazaWindow;
+	private LaSangreImperio laSangreImperioWindow; 
+	
+	
 
 	/**
 	 * Launch the application.
@@ -48,10 +56,39 @@ public class MenuLibrerias {
 		lblSelectALibrary.setBounds(133, 52, 192, 13);
 		frame.getContentPane().add(lblSelectALibrary);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"La Paz Bajo Amenaza", "La Sangre del Imperio", "Los Soles Perdidos"}));
-		comboBox.setBounds(133, 112, 132, 21);
-		frame.getContentPane().add(comboBox);
+		JButton btnNewButton = new JButton("Explore");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				losSolesPerdidosWindow = new LosSolesPerdidos();
+				losSolesPerdidosWindow.setVisibility(true);
+			}	
+			
+		});
+		btnNewButton.setBounds(32, 172, 85, 21);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Explore");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				laPazBajoAmenazaWindow = new LaPazBajoAmenaza();
+				laPazBajoAmenazaWindow.setVisibility(true);
+			}
+		});
+		btnNewButton_1.setBounds(159, 172, 85, 21);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Explore");
+		btnNewButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				laSangreImperioWindow = new LaSangreImperio();
+				laSangreImperioWindow.setVisibility(true);
+			}
+		});
+		btnNewButton_2.setBounds(301, 172, 85, 21);
+		frame.getContentPane().add(btnNewButton_2);
 	}
 	
 	public void setVisibility(boolean visible) {

@@ -1,8 +1,10 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
 
-public class LaSangreDelImprerio {
+public class LaSangreImperio {
 
 	private JFrame frame;
 
@@ -13,7 +15,7 @@ public class LaSangreDelImprerio {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LaSangreDelImprerio window = new LaSangreDelImprerio();
+					LaSangreImperio window = new LaSangreImperio();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -25,7 +27,7 @@ public class LaSangreDelImprerio {
 	/**
 	 * Create the application.
 	 */
-	public LaSangreDelImprerio() {
+	public LaSangreImperio() {
 		initialize();
 	}
 
@@ -36,6 +38,15 @@ public class LaSangreDelImprerio {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("La Sangre Del Imperio");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel.setBounds(68, 57, 285, 47);
+		frame.getContentPane().add(lblNewLabel);
 	}
 
+	public void setVisibility(boolean visible) {
+		frame.setVisible(visible);
+	}
 }

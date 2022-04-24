@@ -1,6 +1,8 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class LosSolesPerdidos {
 
@@ -36,6 +38,15 @@ public class LosSolesPerdidos {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Los Soles Perdidos");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel.setBounds(59, 56, 244, 40);
+		frame.getContentPane().add(lblNewLabel);
 	}
-
+	
+	public void setVisibility(boolean visible) {
+		frame.setVisible(visible);
+	}
 }
